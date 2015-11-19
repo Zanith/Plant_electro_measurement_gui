@@ -66,9 +66,6 @@ class PyplotEmbed(tk.Frame):
         self.graph_area.canvas.get_tk_widget().pack(side='top', fill=tk.BOTH, expand=1)
 
     def update_graph(self, x, y):
-        # print 'len x:', len(x), x[0], x[-1]
-        # print 'len y:', len(y), y[0], y[-1]
-        logging.info("Max input: %i, min input: %i", max(y), min(y))
         _x = x[:len(y)]
 
         self.lines.set_xdata(_x[-10000:])
